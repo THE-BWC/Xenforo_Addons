@@ -1,4 +1,12 @@
 *
 
 !.gitignore
-!/src/addons/Patrick
+!src
+!src/addons
+!src/addons/Patrick
+!src/addons/Patrick/*
+!src/addons/Patrick/*/*
+src/addons/Patrick/*/*/upload
+!src/addons/Patrick/*/*/*
+!src/addons/Patrick/*/*/*/*
+!src/addons/Patrick/*/*/*/*/*

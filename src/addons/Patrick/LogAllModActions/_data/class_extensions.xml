@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<class_extensions>
+  <extension from_class="XF\ModeratorLog\Post" to_class="Patrick\LogAllModActions\XF\ModeratorLog\Post" execute_order="12" active="1"/>
+  <extension from_class="XF\ModeratorLog\ProfilePost" to_class="Patrick\LogAllModActions\XF\ModeratorLog\ProfilePost" execute_order="14" active="1"/>
+  <extension from_class="XF\ModeratorLog\ProfilePostComment" to_class="Patrick\LogAllModActions\XF\ModeratorLog\ProfilePostComment" execute_order="13" active="1"/>
+  <extension from_class="XF\ModeratorLog\Thread" to_class="Patrick\LogAllModActions\XF\ModeratorLog\Thread" execute_order="10" active="1"/>
+  <extension from_class="XF\ModeratorLog\User" to_class="Patrick\LogAllModActions\XF\ModeratorLog\User" execute_order="11" active="1"/>
+</class_extensions>

@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\ModeratorLog\\User",
+    "to_class": "Patrick\\LogAllModActions\\XF\\ModeratorLog\\User",
+    "execute_order": 11,
+    "active": true
+}

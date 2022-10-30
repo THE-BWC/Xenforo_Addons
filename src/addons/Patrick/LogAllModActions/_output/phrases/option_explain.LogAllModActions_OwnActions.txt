@@ -1,0 +1,1 @@
+This will also log actions if the user edits own post or thread

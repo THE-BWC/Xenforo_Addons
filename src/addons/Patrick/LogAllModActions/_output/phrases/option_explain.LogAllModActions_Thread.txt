@@ -1,1 +1,0 @@
-Log all moderator actions related to threads.

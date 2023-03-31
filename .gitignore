@@ -3,12 +3,14 @@
 !.gitignore
 !README.md
 
-!src
-!src/addons
-!src/addons/Patrick
-!src/addons/Patrick/*
-!src/addons/Patrick/*/*
-src/addons/Patrick/*/*/upload
-!src/addons/Patrick/*/*/*
-!src/addons/Patrick/*/*/*/*
-!src/addons/Patrick/*/*/*/*/*
+# Data files
+!forum
+!forum/src
+!forum/src/addons
+!forum/src/addons/Patrick
+!forum/src/addons/Patrick/*
+!forum/src/addons/Patrick/*/*
+forum/src/addons/Patrick/*/*/upload
+!forum/src/addons/Patrick/*/*/*
+!forum/src/addons/Patrick/*/*/*/*
+!forum/src/addons/Patrick/*/*/*/*/*

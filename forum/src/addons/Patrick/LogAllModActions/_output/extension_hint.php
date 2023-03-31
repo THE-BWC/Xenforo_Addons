@@ -3,7 +3,7 @@
 // ################## THIS IS A GENERATED FILE ##################
 // DO NOT EDIT DIRECTLY. EDIT THE CLASS EXTENSIONS IN THE CONTROL PANEL.
 
-namespace src\addons\Patrick\LogAllModActions\_output
+namespace Patrick\LogAllModActions\XF\ModeratorLog
 {
 	class XFCP_Post extends \XF\ModeratorLog\Post {}
 	class XFCP_ProfilePost extends \XF\ModeratorLog\ProfilePost {}

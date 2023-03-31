@@ -1,8 +1,6 @@
 <?php
 
-namespace src\addons\Patrick\PostEditor\XF\Service\Post;
-
-use src\addons\Patrick\PostEditor\_output\XFCP_Editor;
+namespace Patrick\PostEditor\XF\Service\Post;
 
 class Editor extends XFCP_Editor
 {

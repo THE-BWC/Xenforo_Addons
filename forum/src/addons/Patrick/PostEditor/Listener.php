@@ -1,6 +1,6 @@
 <?php
 
-namespace src\addons\Patrick\PostEditor;
+namespace Patrick\PostEditor;
 
 use XF\Mvc\Entity\Entity;
 

@@ -1,7 +1,7 @@
 <?php
 
-namespace src\addons\Patrick\LogAllModActions\XF\ModeratorLog;
-use Patrick\LogAllModActions\XF\ModeratorLog\XFCP_Post;
+namespace Patrick\LogAllModActions\XF\ModeratorLog;
+
 use XF\Mvc\Entity\Entity;
 
 class Post extends XFCP_Post

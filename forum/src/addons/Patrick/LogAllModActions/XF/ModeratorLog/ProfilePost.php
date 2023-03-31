@@ -1,7 +1,6 @@
 <?php
 
-namespace src\addons\Patrick\LogAllModActions\XF\ModeratorLog;
-use src\addons\Patrick\LogAllModActions\_output\XFCP_ProfilePost;
+namespace Patrick\LogAllModActions\XF\ModeratorLog;
 use XF\Mvc\Entity\Entity;
 
 class ProfilePost extends XFCP_ProfilePost

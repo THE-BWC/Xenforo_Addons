@@ -1,6 +1,6 @@
 <?php
 
-namespace src\addons\Patrick\PostEditor;
+namespace Patrick\PostEditor;
 
 use XF\AddOn\AbstractSetup;
 use XF\AddOn\StepRunnerInstallTrait;

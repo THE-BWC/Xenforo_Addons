@@ -8,6 +8,10 @@ This repository contains all the addons that have been created for BWC Xenforo.
 
 ### ApiExtension
 This addon adds a new API endpoint to Xenforo. This endpoint allows you to sign in a user using their session ID or Remember cookie. This is useful for applications that reside on the same domain as Xenforo and wants to allow for seamless sign in.
+The API currently adds the following actions:
+* `auth/from-session` - Logs in a user using their session ID or Remember cookie. This is useful for applications that reside on the same domain as Xenforo and wants to allow for seamless sign in.
+
+Note: The `remember_cookie` is the `xf_user` cookie. To use it for authentication, you must alter the string by replacing `%2C` with `,`. This is because the cookie is URL encoded.
 
 ### LogAllModActions
 This addon logs all moderator actions to the database. Even if the member is not a moderator, the action will be logged. This is useful for auditing purposes.

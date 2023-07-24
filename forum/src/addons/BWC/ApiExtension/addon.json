@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "BWC - ApiExtension",
+    "description": "Extension of the inbuilt API to allow for more functionality",
+    "version_id": 100000,
+    "version_string": "1.0.0",
+    "dev": "Patrick",
+    "dev_url": "",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": [],
+    "icon": "fa-server"
+}

@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\ModeratorLog\\Post",
+    "to_class": "BWC\\LogAllModActions\\XF\\ModeratorLog\\Post",
+    "execute_order": 10,
+    "active": true
+}

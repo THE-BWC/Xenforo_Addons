@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<options>
+  <option option_id="BWC_LogAllModActions_OwnActions" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="BWC_LogAllModActions" display_order="6"/>
+  </option>
+  <option option_id="BWC_LogAllModActions_Post" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="BWC_LogAllModActions" display_order="2"/>
+  </option>
+  <option option_id="BWC_LogAllModActions_ProfilePost" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="BWC_LogAllModActions" display_order="4"/>
+  </option>
+  <option option_id="BWC_LogAllModActions_ProfilePostComment" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="BWC_LogAllModActions" display_order="5"/>
+  </option>
+  <option option_id="BWC_LogAllModActions_Thread" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="BWC_LogAllModActions" display_order="1"/>
+  </option>
+  <option option_id="BWC_LogAllModActions_User" edit_format="onoff" data_type="boolean">
+    <default_value>1</default_value>
+    <relation group_id="BWC_LogAllModActions" display_order="3"/>
+  </option>
+</options>

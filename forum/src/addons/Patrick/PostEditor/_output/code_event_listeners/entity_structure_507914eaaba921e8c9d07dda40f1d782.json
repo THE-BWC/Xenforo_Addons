@@ -1,9 +1,0 @@
-{
-    "event_id": "entity_structure",
-    "execute_order": 10,
-    "callback_class": "Patrick\\PostEditor\\Listener",
-    "callback_method": "postEntityStructure",
-    "active": true,
-    "hint": "XF\\Entity\\Post",
-    "description": "Extends the XF\\Entity\\Post structure"
-}

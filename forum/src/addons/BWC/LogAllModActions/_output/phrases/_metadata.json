@@ -1,0 +1,86 @@
+{
+    "option.BWC_LogAllModActions_OwnActions.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "0106b83a082a31c05ba724329e836d8e"
+    },
+    "option.BWC_LogAllModActions_Post.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "03d947a2158373c3b9d74325850cb8b9"
+    },
+    "option.BWC_LogAllModActions_ProfilePost.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "1b0024bdbda2edd511b77253060af994"
+    },
+    "option.BWC_LogAllModActions_ProfilePostComment.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "acc37db61e0deea4dc15ee41948e7ff8"
+    },
+    "option.BWC_LogAllModActions_Thread.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "d97477d6d8a838ead9348185bb5b6742"
+    },
+    "option.BWC_LogAllModActions_User.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "8f9bfe9d1345237cb3b2b205864da075"
+    },
+    "option_explain.BWC_LogAllModActions_OwnActions.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "9f75e9cae201ad8ecb29adb03da4b4c0"
+    },
+    "option_explain.BWC_LogAllModActions_Post.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "7725da0d03fa817bf784fd10dd0ba3aa"
+    },
+    "option_explain.BWC_LogAllModActions_ProfilePost.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "7b3e809a77ba3223fdbc109bb0cc6fe6"
+    },
+    "option_explain.BWC_LogAllModActions_ProfilePostComment.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "703c9eb82b99296116e6128dca3019f0"
+    },
+    "option_explain.BWC_LogAllModActions_Thread.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "c49564c1fa0563310992b3567bd3eeb6"
+    },
+    "option_explain.BWC_LogAllModActions_User.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "32d0861c109e5fc9728bc6182e4b7b0b"
+    },
+    "option_group.BWC_LogAllModActions.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "87c0231d1ec7271926cad3093e448be3"
+    },
+    "option_group_description.BWC_LogAllModActions.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "0975adeccfb084fdcf9b7958a4db832e"
+    }
+}

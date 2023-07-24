@@ -1,0 +1,13 @@
+{
+    "parent_navigation_id": "",
+    "display_order": 400,
+    "navigation_type_id": "basic",
+    "type_config": {
+        "link": "/opserv",
+        "display_condition": "",
+        "extra_attributes": {
+            "target": "_blank"
+        }
+    },
+    "enabled": true
+}

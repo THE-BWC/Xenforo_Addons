@@ -1,0 +1,1 @@
+Generates a token that can automatically log into a specific XenForo user when the login URL is visited. Only available to super user keys.

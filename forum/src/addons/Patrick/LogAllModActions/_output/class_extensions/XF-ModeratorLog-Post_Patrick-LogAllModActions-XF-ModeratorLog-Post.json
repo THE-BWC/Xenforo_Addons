@@ -1,6 +1,0 @@
-{
-    "from_class": "XF\\ModeratorLog\\Post",
-    "to_class": "Patrick\\LogAllModActions\\XF\\ModeratorLog\\Post",
-    "execute_order": 12,
-    "active": true
-}

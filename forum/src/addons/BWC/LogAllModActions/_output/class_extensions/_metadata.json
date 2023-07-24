@@ -1,0 +1,17 @@
+{
+    "XF-ModeratorLog-Post_BWC-LogAllModActions-XF-ModeratorLog-Post.json": {
+        "hash": "cd4582932ff3b975e38b8a3286c10b38"
+    },
+    "XF-ModeratorLog-ProfilePostComment_BWC-LogAllModActions-XF-ModeratorLog-ProfilePostComment.json": {
+        "hash": "a4e7566ac619c99f8ba57640b857b106"
+    },
+    "XF-ModeratorLog-ProfilePost_BWC-LogAllModActions-XF-ModeratorLog-ProfilePost.json": {
+        "hash": "8eb92a9c672e733d42e88c63153a59e3"
+    },
+    "XF-ModeratorLog-Thread_BWC-LogAllModActions-XF-ModeratorLog-Thread.json": {
+        "hash": "d83a67a0dea028b54f261a6a4a7ec955"
+    },
+    "XF-ModeratorLog-User_BWC-LogAllModActions-XF-ModeratorLog-User.json": {
+        "hash": "a9ff76c324a02d195e6c3986c0a32329"
+    }
+}

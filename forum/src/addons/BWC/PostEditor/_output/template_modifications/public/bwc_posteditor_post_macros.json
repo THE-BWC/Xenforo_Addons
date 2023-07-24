@@ -1,0 +1,9 @@
+{
+    "template": "post_macros",
+    "description": "Alters the \"last edited by:\" text",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:if is=\"$post.last_edit_date\">\n\t\t\t\t\t\t\t<div class=\"message-lastEdit\">\n\t\t\t\t\t\t\t\t<xf:if is=\"$post.user_id == $post.last_edit_user_id\">\n\t\t\t\t\t\t\t\t\t{{ phrase('last_edited:') }} <xf:date time=\"{$post.last_edit_date}\" />\n\t\t\t\t\t\t\t\t<xf:else />\n\t\t\t\t\t\t\t\t\t{{ phrase('last_edited_by_moderator:') }} <xf:date time=\"{$post.last_edit_date}\" />\n\t\t\t\t\t\t\t\t</xf:if>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</xf:if>",
+    "replace": "<xf:if is=\"$post.last_edit_date\">\n\t<div class=\"message-lastEdit\">\n\t\t<span>\n\t\t\t{{ phrase('Last edited by:') }} \n\t\t\t<xf:if is=\"$post.bwc_posteditor_last_edit_username\">\n\t\t\t\t<a href=\"https://the-bwc.com/forum/index.php?members/{{ $post.last_edit_user_id }}/\" class=\"username\" data-xf-init=\"member-tooltip\" data-user-id=\"{{ $post.last_edit_user_id }}\" data-username=\"@{{ $post.bwc_posteditor_last_edit_username }}\">\n\t\t\t\t\t{{ $post.bwc_posteditor_last_edit_username }}\n\t\t\t\t</a>\n\t\t\t\t<xf:else />\n\t\t\t\t{{ phrase('Moderator') }}\n\t\t\t</xf:if>\n\t\t</span>\n\t\t<br/>\n\t\t<span>{{ phrase('When:') }} <xf:date time=\"{$post.last_edit_date}\" /></span>\n\t</div>\n</xf:if>"
+}

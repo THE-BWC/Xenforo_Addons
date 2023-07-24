@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\ModeratorLog\\ProfilePostComment",
+    "to_class": "BWC\\LogAllModActions\\XF\\ModeratorLog\\ProfilePostComment",
+    "execute_order": 10,
+    "active": true
+}

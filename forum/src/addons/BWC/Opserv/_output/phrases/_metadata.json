@@ -1,0 +1,44 @@
+{
+    "custom_bb_code_desc.fs.txt": {
+        "global_cache": false,
+        "version_id": 1,
+        "version_string": "1.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "custom_bb_code_example.fs.txt": {
+        "global_cache": false,
+        "version_id": 1,
+        "version_string": "1.0",
+        "hash": "8beeb274820e0591cdecb479705ff9c5"
+    },
+    "custom_bb_code_output.fs.txt": {
+        "global_cache": false,
+        "version_id": 1,
+        "version_string": "1.0",
+        "hash": "db5a47a393b909e8375e059ddf764870"
+    },
+    "custom_bb_code_title.fs.txt": {
+        "global_cache": false,
+        "version_id": 1,
+        "version_string": "1.0",
+        "hash": "0317fd827fb392e9a053afbcbd8b8192"
+    },
+    "nav.opserv.txt": {
+        "global_cache": false,
+        "version_id": 1,
+        "version_string": "1.0",
+        "hash": "55c5ec0d1020dab5388d9eef3472eafa"
+    },
+    "nav.opserv_coc.txt": {
+        "global_cache": false,
+        "version_id": 1,
+        "version_string": "1.0",
+        "hash": "0e790267ed0028cc5292da602906799d"
+    },
+    "nav.opserv_rank.txt": {
+        "global_cache": false,
+        "version_id": 1,
+        "version_string": "1.0",
+        "hash": "cd9b9036c073a8ee933f75e76318a444"
+    }
+}

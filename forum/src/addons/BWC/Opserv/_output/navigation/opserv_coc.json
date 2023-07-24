@@ -1,0 +1,13 @@
+{
+    "parent_navigation_id": "opserv",
+    "display_order": 2,
+    "navigation_type_id": "basic",
+    "type_config": {
+        "link": "/opserv/decorations.php?coc",
+        "display_condition": "",
+        "extra_attributes": {
+            "target": "_blank"
+        }
+    },
+    "enabled": true
+}

@@ -1,0 +1,20 @@
+{
+    "bb_code_mode": "callback",
+    "has_option": "optional",
+    "replace_html": "",
+    "replace_html_email": "",
+    "replace_text": "",
+    "callback_class": "XF\\Data\\Opserv\\Member",
+    "callback_method": "bbcode_display_fruitsalad",
+    "option_regex": "",
+    "trim_lines_after": 0,
+    "plain_children": false,
+    "disable_smilies": false,
+    "disable_nl2br": false,
+    "disable_autolink": false,
+    "allow_empty": false,
+    "allow_signature": true,
+    "editor_icon_type": "",
+    "editor_icon_value": "",
+    "active": true
+}

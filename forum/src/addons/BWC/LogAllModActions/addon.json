@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "BWC - LogAllModActions",
+    "description": "Log all moderator related actions to the moderator log, even if the user is not a real moderator",
+    "version_id": 100000,
+    "version_string": "1.0.0",
+    "dev": "Patrick",
+    "dev_url": "",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": [],
+    "icon": "fa-tools"
+}

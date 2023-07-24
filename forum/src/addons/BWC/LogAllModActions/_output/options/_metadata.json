@@ -1,0 +1,20 @@
+{
+    "BWC_LogAllModActions_OwnActions.json": {
+        "hash": "415effcf2d1476b9b64d8278ea27b707"
+    },
+    "BWC_LogAllModActions_Post.json": {
+        "hash": "2abf59a88f0cf4a62dd8d512cb297c3a"
+    },
+    "BWC_LogAllModActions_ProfilePost.json": {
+        "hash": "8dbe2c625fd5333562cb6e710e9aa776"
+    },
+    "BWC_LogAllModActions_ProfilePostComment.json": {
+        "hash": "732286276c20ad638eba278a8af6b88e"
+    },
+    "BWC_LogAllModActions_Thread.json": {
+        "hash": "d0a76d0304a88744439d796d5bb0502c"
+    },
+    "BWC_LogAllModActions_User.json": {
+        "hash": "4b0958a714a9297cf63b35b302e9df4c"
+    }
+}

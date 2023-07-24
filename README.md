@@ -9,7 +9,9 @@ This repository contains all the addons that have been created for BWC Xenforo.
 ### ApiExtension
 This addon adds a new API endpoint to Xenforo. This endpoint allows you to sign in a user using their session ID or Remember cookie. This is useful for applications that reside on the same domain as Xenforo and wants to allow for seamless sign in.
 The API currently adds the following actions:
-* `auth/from-session` - Logs in a user using their session ID or Remember cookie. This is useful for applications that reside on the same domain as Xenforo and wants to allow for seamless sign in.
+* `auth` - Tests a login and password for validity. Only available to super user keys. We strongly recommend the login and password parameters are passed into the request body rather than the query string.
+* `auth/from-session` - Looks up the active XenForo user based on session ID or remember cookie value. This can be used to help with seamless SSO with XF, assuming the session or remember cookies are available to your page. At least one of session_id and remember_cookie must be provided. Only available to super user keys.
+* `auth/login-token` - Generates a token that can automatically log into a specific XenForo user when the login URL is visited. If the visitor is already logged into a XenForo account, they will not be logged into the specified account. Only available to super user keys.
 
 Note: The `remember_cookie` is the `xf_user` cookie. To use it for authentication, you must alter the string by replacing `%2C` with `,`. This is because the cookie is URL encoded.
 

@@ -1,0 +1,11 @@
+{
+    "admin/memberslocaltime_style_property_template_message.json": {
+        "hash": "d91ec2e17943c3f036d3e84cbed37c16"
+    },
+    "public/memberslocaltime_member_macros.json": {
+        "hash": "b6f979344fc897b62d2b48b6332b2bac"
+    },
+    "public/memberslocaltime_message_macros.json": {
+        "hash": "b1392dbcd5ca037a2a7ac034e527dd48"
+    }
+}

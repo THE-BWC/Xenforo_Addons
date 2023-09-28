@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="api_scope.auth_login_token" version_id="100000" version_string="1.0.0"><![CDATA[Generates a token that can automatically log into a specific XenForo user when the login URL is visited. Only available to super user keys.]]></phrase>
+</phrases>

@@ -4,5 +4,11 @@
         "version_id": 100000,
         "version_string": "1.0.0",
         "hash": "632034103a4b8fa2c96c69d2a517b2f3"
+    },
+    "api_scope.user_connected_accounts.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "d362362418eac0549d4aaede900ac045"
     }
 }

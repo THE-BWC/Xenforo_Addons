@@ -1,0 +1,32 @@
+{
+    "memberslocaltime_local_time.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "d25bc49e0b9afafa0b655f0ec768b157"
+    },
+    "option.memberslocaltime_show_on_member_pages.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "c6518da48a7aebea730265a93ad2d1e9"
+    },
+    "option_explain.memberslocaltime_show_on_member_pages.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "6573eb89571b9a1e18d1f52ef1bba27f"
+    },
+    "option_group.memberslocaltime.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "03b5ac059276be60f14a6fa9e121c9a2"
+    },
+    "option_group_description.memberslocaltime.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "794ce82ae5ac22543f5867445e533b15"
+    }
+}

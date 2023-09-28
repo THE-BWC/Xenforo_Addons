@@ -1,0 +1,9 @@
+{
+    "template": "message_macros",
+    "description": "Add members' local time to messages.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/<xf:if is=\"\\$extras\\.register_date\">.*?<\\/xf:if>/s",
+    "replace": "$0\n\t\t\t\t\t<xf:if is=\"$extras.memberslocaltime_local_time\">\n\t\t\t\t\t\t<xf:macro name=\"user_info\" template=\"memberslocaltime_message_macros\" arg-user=\"{$user}\" />\n\t\t\t\t\t</xf:if>"
+}

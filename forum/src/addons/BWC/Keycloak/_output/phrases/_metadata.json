@@ -1,0 +1,38 @@
+{
+    "con_acc.keycloak.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "69b9cd2452d8b95ca6cb79f295cc9468"
+    },
+    "con_acc_desc.keycloak.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    "con_acc_keycloak_client_id_explain.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "c1b765ad932e2c27fe85dc7e317c55d9"
+    },
+    "con_acc_keycloak_client_secret_explain.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "68dd1d125c616800ef34b2b7464d9bd7"
+    },
+    "keycloak_auth_url.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "7b1b24e5d6c1fa996b908b9c0dabe540"
+    },
+    "keycloak_token_url.txt": {
+        "global_cache": false,
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "18b0bb05a869ea2b4d803af924ea594d"
+    }
+}

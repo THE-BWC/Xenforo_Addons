@@ -1,0 +1,12 @@
+{
+    "admin/connected_account_provider_keycloak.html": {
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "88b908f0199ded5b73b82f6607ada14b"
+    },
+    "public/connected_account_associated_keycloak.html": {
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+}

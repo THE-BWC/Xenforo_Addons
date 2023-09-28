@@ -1,0 +1,1 @@
+Allows fetching a users connected accounts

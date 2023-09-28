@@ -136,6 +136,11 @@ class Auth extends XFCP_Auth
         return $this->apiBoolResult(false);
     }
 
+    public function apiBoolResult(bool $success, array $extra = []): \XF\Api\Mvc\Reply\ApiResult
+    {
+        return $this->apiResult(['success' => $success] + $extra);
+    }
+
     protected function validateIpAgainstSession(array $sessionData, string $expectedIp): bool
     {
         // This is basically copied out of the session class...
@@ -173,6 +178,31 @@ class Auth extends XFCP_Auth
         }
 
         return $this->repository('XF:User')->getGuestUser();
+    }
+
+    public function actionPostSessionCookie()
+    {
+        // Create a session cookie for the specified user. Only available to super user keys.
+        // This is useful for creating a session cookie for a user that has been logged in via another system.
+        // The user ID must be provided, and optionally the IP address that the session should be limited to.
+        // If the IP address is not provided, the session will not be limited to a specific IP.
+        // If the user is already logged in, the existing session will be replaced.
+        // If the user is banned, the session will not be created.
+
+        $this->assertRequiredApiInput('user_id');
+
+        $userId = $this->filter('user_id', 'uint');
+        $limitIp = $this->filter('limit_ip', 'str');
+
+        /** @var \XF\Entity\User $user */
+        $user = $this->assertRecordExists('XF:User', $userId, 'api');
+
+        if ($user->is_banned)
+        {
+            return $this->error(\XF::phrase('user_is_banned'));
+        }
+
+
     }
 
     /**

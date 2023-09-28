@@ -1,0 +1,9 @@
+{
+    "template": "member_macros",
+    "description": "Add members' local time to tooltip.",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<!--[XF:stat_pairs:above_messages]-->",
+    "replace": "<xf:macro name=\"member_stat_pairs\" template=\"memberslocaltime_member_macros\" arg-user=\"{$user}\" arg-context=\"{$context}\" />\n\t$0"
+}

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template_modifications>
-  <modification type="public" template="post_macros" modification_key="post_macros" description="Alters the &quot;last edited by:&quot; text" execution_order="10" enabled="1" action="str_replace">
+  <modification type="public" template="post_macros" modification_key="bwc_posteditor_post_macros" description="Alters the &quot;last edited by:&quot; text" execution_order="10" enabled="1" action="str_replace">
     <find><![CDATA[<xf:if is="$post.last_edit_date">
-	<div class="message-lastEdit">
-		<xf:if is="$post.user_id == $post.last_edit_user_id">
-			{{ phrase('last_edited:') }} <xf:date time="{$post.last_edit_date}" />
-			<xf:else />
-			{{ phrase('last_edited_by_moderator:') }} <xf:date time="{$post.last_edit_date}" />
-		</xf:if>
-	</div>
-</xf:if>]]></find>
+							<div class="message-lastEdit">
+								<xf:if is="$post.user_id == $post.last_edit_user_id">
+									{{ phrase('last_edited:') }} <xf:date time="{$post.last_edit_date}" />
+								<xf:else />
+									{{ phrase('last_edited_by_moderator:') }} <xf:date time="{$post.last_edit_date}" />
+								</xf:if>
+							</div>
+						</xf:if>]]></find>
     <replace><![CDATA[<xf:if is="$post.last_edit_date">
 	<div class="message-lastEdit">
 		<span>

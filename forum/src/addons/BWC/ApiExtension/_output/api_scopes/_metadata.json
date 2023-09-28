@@ -1,5 +1,8 @@
 {
     "auth-login_token.json": {
         "hash": "4693d493f94118918a2c0a3e0f612ca7"
+    },
+    "user-connected_accounts.json": {
+        "hash": "e0948dd98dc6f348d82ce1600674f7a7"
     }
 }

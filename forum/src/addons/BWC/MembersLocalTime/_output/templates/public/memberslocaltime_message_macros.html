@@ -1,0 +1,6 @@
+<xf:macro name="user_info" template="memberslocaltime_message_macros" arg-user="!">
+	<dl class="pairs pairs--justified">
+		<dt>{{ phrase('memberslocaltime_local_time') }}</dt>
+		<dd>{{ time($user.getLocalTime()) }}</dd>
+	</dl>
+</xf:macro>

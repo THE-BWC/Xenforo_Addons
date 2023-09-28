@@ -1,0 +1,12 @@
+{
+    "public/memberslocaltime_member_macros.html": {
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "544210ddbd0e16432f61a3c8a580d1e0"
+    },
+    "public/memberslocaltime_message_macros.html": {
+        "version_id": 100000,
+        "version_string": "1.0.0",
+        "hash": "d474fdde520b8c826d37f927e70d0f35"
+    }
+}

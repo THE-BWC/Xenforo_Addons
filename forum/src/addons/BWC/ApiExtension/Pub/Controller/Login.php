@@ -45,12 +45,13 @@ class Login extends XFCP_Login
 
         $token->delete();
 
-        $returnUrl = $this->filter('return', 'str');
+        $returnUrl = $this->filter('return_url', 'str');
         if (!$returnUrl)
         {
+            \XF::logException(new PrintableException('No return URL provided for API login token'));
             $returnUrl = $this->buildLink('index');
         }
-
+        \XF::logException(new PrintableException('returnUrl: ' . $returnUrl));
         return $this->redirect($returnUrl);
     }
 }

@@ -1,0 +1,8 @@
+<xf:macro name="member_stat_pairs" arg-user="!">
+	<xf:if is="{$xf.options.memberslocaltime_show_on_member_pages}">
+		<dl class="pairs pairs--rows pairs--rows--centered">
+			<dt>{{ phrase('memberslocaltime_local_time') }}</dt>
+			<dd>{{ time($user.getLocalTime()) }}</dd>
+		</dl>
+	</xf:if>
+</xf:macro>

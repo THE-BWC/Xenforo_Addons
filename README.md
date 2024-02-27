@@ -1,9 +1,14 @@
+<img alt="Black Widow Company" src="https://the-bwc.com/PAO/BannerStandard.png"/>
+
 # BWC Xenforo Addons
 This repository contains all the addons that have been created for BWC Xenforo.
 
 ## Current Addons
 * ApiExtension
+* Keycloak
 * LogAllModActions
+* MembersLocalTime
+* Opserv
 * PostEditor
 
 ### ApiExtension
@@ -15,8 +20,26 @@ The API currently adds the following actions:
 
 Note: The `remember_cookie` is the `xf_user` cookie. To use it for authentication, you must alter the string by replacing `%2C` with `,`. This is because the cookie is URL encoded.
 
+### Keycloak
+This addon allows for seamless integration with Keycloak. It allows for the following:
+* Single Sign On (SSO) with Keycloak
+* User creation and updating
+
 ### LogAllModActions
 This addon logs all moderator actions to the database. Even if the member is not a moderator, the action will be logged. This is useful for auditing purposes.
+
+### MembersLocalTime
+This addon adds a new column to the members information that shows the local time of the member. This is useful for scheduling events and knowing when a member is online.
+
+### Opserv
+This addon adds several new navigation links to the navigation bar, BB code, and extends the user class.
+The following links are added to the navigation bar:
+* Opserv - A link to the Opserv page.
+  * Ranks - A link to the Ranks page.
+  * Chain of Command - A link to the Chain of Command page.
+
+The following BB code is added:
+* [FS=userId] - Shows the member's Fruit Salad. Replace `userId` with the member's user ID.
 
 ### PostEditor
 This addon adds a footnote to a post that shows the last editor of the post. This is useful for auditing purposes.
@@ -47,16 +70,10 @@ Note: Patrick is required for the addon to be built due to the way the addon was
 4. Create a pull request.
 5. Enjoy!
 
-## License
-All rights reserved to Black Widow Company. This repository is for internal use only. No redistribution is allowed.  
-[<img alt="Black Widow Company" height="50" src="https://the-bwc.com/PAO/BannerStandard.png"/>](https://www.the-bwc.com)
-
-
-## Disclaimer
-If you are not a member of Black Widow Company, you are not allowed to use, modify or distribute any of the files in this repository without the express permission of the S-1 Technical Officer or the S-1 Officer in Charge.
-
 ## Contact
-If you have any questions, feel free to contact me on Discord: `[BWC] Patrick#4943`, or on the [BWC Discord server](https://discord.com/invite/the-bwc) or the [BWC forums](https://the-bwc.com/forum/index.php).
+If you have any questions, feel free to contact me at:
+- [BWC Discord](https://discord.the-bwc.com/) `[BWC] Patrick`
+- [BWC Forums](https://the-bwc.com/forum/index.php) `Patrick`.
 
 ## Credits
 * [Xenforo](https://xenforo.com/)

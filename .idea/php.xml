@@ -9,6 +9,22 @@
   <component name="PHPCodeSnifferOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/opserv/vendor/planetteamspeak/ts3-php-framework" />
+      <path value="$PROJECT_DIR$/opserv/vendor/composer" />
+      <path value="$PROJECT_DIR$/forum/src/addons/BS/RealTimeChat/vendor/workerman/channel" />
+      <path value="$PROJECT_DIR$/forum/src/addons/BS/RealTimeChat/vendor/workerman/phpsocket.io-emitter" />
+      <path value="$PROJECT_DIR$/forum/src/addons/BS/RealTimeChat/vendor/workerman/phpsocket.io" />
+      <path value="$PROJECT_DIR$/forum/src/addons/BS/RealTimeChat/vendor/workerman/workerman" />
+      <path value="$PROJECT_DIR$/forum/src/addons/BS/RealTimeChat/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="PhpProjectServersManager">
+    <servers>
+      <server host="addon.the-bwc.local" id="d09150cf-4a09-4d1c-bcc0-613d6da57aa9" name="addon.the-bwc.local" port="443" />
+    </servers>
+  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.4">
     <option name="suggestChangeDefaultLanguageLevel" value="false" />
   </component>

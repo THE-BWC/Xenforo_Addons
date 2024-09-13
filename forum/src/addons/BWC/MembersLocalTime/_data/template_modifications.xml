@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template_modifications>
+  <modification type="public" template="member_macros" modification_key="memberslocaltime_member_macros" description="Add members' local time to tooltip." execution_order="10" enabled="1" action="str_replace">
+    <find><![CDATA[<!--[XF:stat_pairs:above_messages]-->]]></find>
+    <replace><![CDATA[<xf:macro name="member_stat_pairs" template="memberslocaltime_member_macros" arg-user="{$user}" arg-context="{$context}" />
+	$0]]></replace>
+  </modification>
+  <modification type="public" template="message_macros" modification_key="memberslocaltime_message_macros" description="Add members' local time to messages." execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:if is="\$extras\.register_date">.*?<\/xf:if>/s]]></find>
+    <replace><![CDATA[$0
+					<xf:if is="$extras.memberslocaltime_local_time">
+						<xf:macro name="user_info" template="memberslocaltime_message_macros" arg-user="{$user}" />
+					</xf:if>]]></replace>
+  </modification>
+  <modification type="admin" template="style_property_template_messageUserElements" modification_key="memberslocaltime_style_property_template_message" description="Add members' local time option to message user info elements style property." execution_order="10" enabled="1" action="preg_replace">
+    <find><![CDATA[/<xf:option name=\"{\$formBaseKey}\[register_date\]\".*?<\/xf:option>/s]]></find>
+    <replace><![CDATA[$0
+	<xf:option name="{$formBaseKey}[memberslocaltime_local_time]" selected="{$property.property_value.memberslocaltime_local_time}">
+		{{ phrase('memberslocaltime_local_time') }}
+	</xf:option>]]></replace>
+  </modification>
+</template_modifications>

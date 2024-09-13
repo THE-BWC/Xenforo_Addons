@@ -2,13 +2,15 @@
     "legacy_addon_id": "",
     "title": "BWC - LogAllModActions",
     "description": "Log all moderator related actions to the moderator log, even if the user is not a real moderator",
-    "version_id": 100000,
-    "version_string": "1.0.0",
+    "version_id": 1000170,
+    "version_string": "1.0.1",
     "dev": "Patrick",
-    "dev_url": "",
+    "dev_url": "https://the-bwc.com",
     "faq_url": "",
     "support_url": "",
-    "extra_urls": [],
+    "extra_urls": {
+        "Github": "https://github.com/THE-BWC/Xenforo_Addons"
+    },
     "require": [],
     "icon": "fa-tools"
 }

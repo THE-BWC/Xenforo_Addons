@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="memberslocaltime_local_time" version_id="100000" version_string="1.0.0"><![CDATA[Local time]]></phrase>
+  <phrase title="option.memberslocaltime_show_on_member_pages" version_id="100000" version_string="1.0.0"><![CDATA[Show local time on member pages]]></phrase>
+  <phrase title="option_explain.memberslocaltime_show_on_member_pages" version_id="100000" version_string="1.0.0"><![CDATA[Enabling this option will show the members' local time on the member tooltip and their profile page.]]></phrase>
+  <phrase title="option_group.memberslocaltime" version_id="100000" version_string="1.0.0"><![CDATA[Member Local Time]]></phrase>
+  <phrase title="option_group_description.memberslocaltime" version_id="100000" version_string="1.0.0"><![CDATA[Options for the Member Local Time add-on.]]></phrase>
+</phrases>

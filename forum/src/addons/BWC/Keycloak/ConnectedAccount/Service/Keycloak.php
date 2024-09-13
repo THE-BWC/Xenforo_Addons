@@ -29,12 +29,12 @@ class Keycloak extends AbstractService
 
     public function getAuthorizationEndpoint()
     {
-        return new Uri('https://auth.the-bwc.local/realms/bwc/protocol/openid-connect/auth');
+        return new Uri('https://auth.sw.patrickpedersen.tech/realms/bwc/protocol/openid-connect/auth');
     }
 
     public function getAccessTokenEndpoint()
     {
-        return new Uri('https://auth.the-bwc.local/realms/bwc/protocol/openid-connect/token');
+        return new Uri('https://auth.sw.patrickpedersen.tech/realms/bwc/protocol/openid-connect/token');
     }
 
     protected function getAuthorizationMethod()
@@ -44,7 +44,6 @@ class Keycloak extends AbstractService
 
     protected function parseAccessTokenResponse($responseBody)
     {
-        \XF::logError("parseAccessTokenResponse: " . $responseBody);
         $data = json_decode($responseBody, true);
 
         if (null === $data || !is_array($data)) {

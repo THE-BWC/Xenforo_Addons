@@ -8,7 +8,7 @@ class Keycloak extends AbstractProviderData
 {
     public function getDefaultEndpoint()
     {
-        return 'https://auth.the-bwc.local/realms/bwc/protocol/openid-connect/userinfo';
+        return 'https://auth.sw.patrickpedersen.tech/realms/bwc/protocol/openid-connect/userinfo';
     }
 
     public function getProviderKey()
@@ -18,6 +18,13 @@ class Keycloak extends AbstractProviderData
 
     public function getEmail()
     {
-        return $this->requestFromEndpoint('email');
+        $emailData = $this->requestFromEndpoint('email');
+
+        if ($emailData)
+        {
+            return "$emailData";
+        }
+
+        return null;
     }
 }

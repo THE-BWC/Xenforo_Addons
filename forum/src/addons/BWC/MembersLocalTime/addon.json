@@ -2,13 +2,15 @@
     "legacy_addon_id": "",
     "title": "BWC - Member Local Time",
     "description": "Show a members' local time on their profile, member card, and posts.",
-    "version_id": 100000,
-    "version_string": "1.0.0",
-    "dev": "",
-    "dev_url": "",
+    "version_id": 1000170,
+    "version_string": "1.0.1",
+    "dev": "Patrick",
+    "dev_url": "https://the-bwc.com",
     "faq_url": "",
     "support_url": "",
-    "extra_urls": [],
+    "extra_urls": {
+        "Github": "https://github.com/THE-BWC/Xenforo_Addons"
+    },
     "require": [],
-    "icon": ""
+    "icon": "fa-clock"
 }

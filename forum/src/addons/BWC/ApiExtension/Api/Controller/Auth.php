@@ -2,9 +2,13 @@
 
 namespace BWC\ApiExtension\Api\Controller;
 
-// Before you ask. For some reason, the API doesn't seem to either use or like the XFCP_ prefix/extension system. Even though it's valid PHP, the IDE doesn't complain, and it works in the other add-ons.
-// So I'm just going to require the extension_hint here. It's not like it's going to change. Plus this keeps us 'compliant' with the XF2 extension system.
-require_once(__DIR__ . '/../../_output/extension_hint.php');
+// XenForo defines XFCP_Auth (an alias of the class being extended) before it loads this class, when the
+// class extension is active. The extension hint is only a fallback for when it hasn't: release builds
+// don't ship _output, so it's loaded only if it's there.
+if (!class_exists(__NAMESPACE__ . '\\XFCP_Auth', false) && is_file(__DIR__ . '/../../_output/extension_hint.php'))
+{
+    require_once(__DIR__ . '/../../_output/extension_hint.php');
+}
 
 use XF\Mvc\Entity\Entity;
 use XF\Mvc\ParameterBag;

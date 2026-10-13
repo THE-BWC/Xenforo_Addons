@@ -1,4 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<api_scopes>
-  <api_scope api_scope_id="auth:login_token"/>
-</api_scopes>
+<api_scopes/>

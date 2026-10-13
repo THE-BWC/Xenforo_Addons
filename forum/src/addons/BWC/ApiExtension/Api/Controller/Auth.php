@@ -4,7 +4,7 @@ namespace BWC\ApiExtension\Api\Controller;
 
 // Before you ask. For some reason, the API doesn't seem to either use or like the XFCP_ prefix/extension system. Even though it's valid PHP, the IDE doesn't complain, and it works in the other add-ons.
 // So I'm just going to require the extension_hint here. It's not like it's going to change. Plus this keeps us 'compliant' with the XF2 extension system.
-require_once($_SERVER['DOCUMENT_ROOT']."/forum/src/addons/BWC/ApiExtension/_output/extension_hint.php");
+require_once(__DIR__ . '/../../_output/extension_hint.php');
 
 use XF\Mvc\Entity\Entity;
 use XF\Mvc\ParameterBag;
@@ -126,6 +126,11 @@ class Auth extends XFCP_Auth
             if ($rememberRepo->validateByCookieValue($rememberCookie, $remember))
             {
                 $user = $this->em()->find('XF:User', $remember->user_id, 'api');
+                if (!$user)
+                {
+                    // The remember record outlived its user.
+                    return $this->apiBoolResult(false);
+                }
 
                 return $this->apiSuccess([
                     'user' => $user->toApiResult(Entity::VERBOSITY_VERBOSE, ['full_profile' => true])
@@ -178,93 +183,5 @@ class Auth extends XFCP_Auth
         }
 
         return $this->repository('XF:User')->getGuestUser();
-    }
-
-    public function actionPostSessionCookie()
-    {
-        // Create a session cookie for the specified user. Only available to super user keys.
-        // This is useful for creating a session cookie for a user that has been logged in via another system.
-        // The user ID must be provided, and optionally the IP address that the session should be limited to.
-        // If the IP address is not provided, the session will not be limited to a specific IP.
-        // If the user is already logged in, the existing session will be replaced.
-        // If the user is banned, the session will not be created.
-
-        $this->assertRequiredApiInput('user_id');
-
-        $userId = $this->filter('user_id', 'uint');
-        $limitIp = $this->filter('limit_ip', 'str');
-
-        /** @var \XF\Entity\User $user */
-        $user = $this->assertRecordExists('XF:User', $userId, 'api');
-
-        if ($user->is_banned)
-        {
-            return $this->error(\XF::phrase('user_is_banned'));
-        }
-
-
-    }
-
-    /**
-     * @api-desc Generates a token that can automatically log into a specific XenForo user when the login URL
-     *      is visited. If the visitor is already logged into a XenForo account, they will not be logged into
-     *      the specified account. Only available to super user keys.
-     *
-     * @api-in <req> int $user_id
-     * @api-in str $limit_ip If provided, locks the token to the specified IP for additional security
-     * @api-in str $return_url If provided, after logging the user will be returned to this URL. Otherwise they'll go to the XenForo index.
-     * @api-in bool $force If provided, the login URL will forcibly replace the currently logged in user if a user is already logged in and different to the currently logged in user. Defaults to false.
-     * @api-in bool $remember Controls whether the a "remember me" cookie will be set when the user logs in. Defaults to true.
-     *
-     * @api-out str $login_token
-     * @api-out str $login_url Direct user to this URL to trigger a login
-     * @api-out int $expiry_date Unix timestamp of when the token expires. An error will be displayed if the token is expired or invalid
-     *
-     * @throws Exception
-     */
-    public function actionPostLoginToken()
-    {
-        $this->assertApiScope('auth:login_token');
-        $this->assertRequiredApiInput('user_id');
-
-        $userId = $this->filter('user_id', 'uint');
-
-        /** @var \XF\Entity\User $user */
-        $user = $this->assertRecordExists('XF:User', $userId, 'api');
-
-        /** @var \BWC\ApiExtension\Entity\ApiLoginToken $loginToken */
-        $loginToken = $this->em()->create('BWC\ApiExtension:ApiLoginToken');
-        $loginToken->user_id = $user->user_id;
-
-        $limitIp = $this->filter('limit_ip', 'str');
-        if ($limitIp)
-        {
-            $loginToken->limit_ip = $limitIp;
-        }
-
-        $loginToken->save();
-
-        $returnUrl = $this->filter('return_url', 'str');
-        $returnUrl = $returnUrl ? $this->request->convertToAbsoluteUri($returnUrl, true) : null;
-
-        $force = $this->filter('force', 'bool', false);
-        $remember = $this->filter('remember', 'bool', true);
-
-        $publicRouter = $this->app->router('public');
-
-        return $this->apiResult([
-            'login_token' => $loginToken->login_token,
-            'login_url' => $publicRouter->buildLink(
-                'canonical:login/api-token',
-                null,
-                [
-                    'token' => $loginToken->login_token,
-                    'return_url' => $returnUrl,
-                    'force' => $force ? 1 : 0,
-                    'remember' => $remember ? 1 : 0
-                ]
-            ),
-            'expiry_date' => $loginToken->expiry_date
-        ]);
     }
 }

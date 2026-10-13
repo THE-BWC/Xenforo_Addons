@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <routes>
-  <route route_type="api" route_prefix="auth" sub_name="from-session" controller="BWC\ApiExtension:Auth"/>
+  <route route_type="api" route_prefix="auth" sub_name="from-session" format="from-session" controller="BWC\ApiExtension:Auth" action_prefix="from-session"/>
 </routes>

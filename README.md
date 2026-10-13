@@ -13,13 +13,12 @@ This repository contains all the addons that have been created for BWC Xenforo.
 
 ### ApiExtension
 This addon extends XenForo 2.1's API with what 2.2 has built in, so applications on the same domain can sign a user in with their forum session. OpServ V10 uses it for "already logged into the forum → logged into OpServ".
-The API currently has the following actions (both only available to super user keys with the `auth` scope):
-* `auth` - Tests a login and password for validity. We strongly recommend the login and password parameters are passed into the request body rather than the query string.
+It adds one action (super user keys with the `auth` scope only); XenForo 2.1's own `auth` (test a login and password) is unchanged:
 * `auth/from-session` - Looks up the active XenForo user based on session ID or remember cookie value. This can be used to help with seamless SSO with XF, assuming the session or remember cookies are available to your page. At least one of `session_id` and `remember_cookie` must be provided; `session_ip_limit` checks the session's IP the way XenForo does. A session that isn't logged in returns the guest user (`user_id` 0).
 
 Note: The `remember_cookie` is the `xf_user` cookie. To use it for authentication, you must alter the string by replacing `%2C` with `,`. This is because the cookie is URL encoded.
 
-Version 1.1.0 removed `auth/login-token`, the unfinished `auth/session-cookie` and the unused `connected-accounts` endpoint: actions that could log in as any user turned a leaked API key into a way into every account. Upgrading from 1.0.0 drops the login token table.
+Version 1.1.0 removed `auth/login-token`, the unfinished `auth/session-cookie` and the unused `connected-accounts` endpoint: actions that could log in as any user turned a leaked API key into a way into every account. Upgrading from 1.0.0 drops the login token table. It no longer extends XenForo's `Auth` controller either: the route has its own controller, so no `XFCP_` class or extension hint is involved.
 
 ### Keycloak
 This addon allows for seamless integration with Keycloak. It allows for the following:

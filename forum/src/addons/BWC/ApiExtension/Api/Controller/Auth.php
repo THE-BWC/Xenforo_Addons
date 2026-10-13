@@ -2,14 +2,6 @@
 
 namespace BWC\ApiExtension\Api\Controller;
 
-// XenForo defines XFCP_Auth (an alias of the class being extended) before it loads this class, when the
-// class extension is active. The extension hint is only a fallback for when it hasn't: release builds
-// don't ship _output, so it's loaded only if it's there.
-if (!class_exists(__NAMESPACE__ . '\\XFCP_Auth', false) && is_file(__DIR__ . '/../../_output/extension_hint.php'))
-{
-    require_once(__DIR__ . '/../../_output/extension_hint.php');
-}
-
 use XF\Mvc\Entity\Entity;
 use XF\Mvc\ParameterBag;
 use XF\Mvc\Reply\Exception;
@@ -19,7 +11,10 @@ use function is_array, is_string, strlen;
 /**
  * @api-group Auth
  */
-class Auth extends XFCP_Auth
+// Its own controller for its own route (auth/from-session). It doesn't extend XenForo's Auth controller:
+// core already serves POST auth, and a route that names this class loads it directly, so a class
+// extension's XFCP_ parent would never be defined.
+class Auth extends \XF\Api\Controller\AbstractController
 {
     /**
      * @throws Exception
@@ -28,45 +23,6 @@ class Auth extends XFCP_Auth
     {
         $this->assertSuperUserKey();
         $this->assertApiScope('auth');
-    }
-
-    /**
-     * @api-desc Tests a login and password for validity. Only available to super user keys. We strongly recommend the login and password parameters are passed into the request body rather than the query string.
-     *
-     * @api-in <req> str $login The username or email address of the user to test
-     * @api-in <req> str $password The password of the user
-     * @api-in str $limit_ip The IP that should be considered to be making the request. If provided, this will be used to prevent brute force attempts.
-     *
-     * @api-out User $user If successful, the user record of the matching user
-     *
-     * @throws Exception
-     */
-    public function actionPost()
-    {
-        $this->assertRequiredApiInput(['login', 'password']);
-
-        $input = $this->filter([
-            'login' => 'str',
-            'password' => 'str',
-            'limit_ip' => 'str'
-        ]);
-
-        /** @var \XF\Service\User\Login $loginService */
-        $loginService = $this->service('XF:User\Login', $input['login'], $input['limit_ip']);
-        if ($loginService->isLoginLimited($limitType))
-        {
-            return $this->error(\XF::phrase('your_account_has_temporarily_been_locked_due_to_failed_login_attempts'));
-        }
-
-        $user = $loginService->validate($input['password'], $error);
-        if (!$user)
-        {
-            return $this->error($error);
-        }
-
-        return $this->apiSuccess([
-            'user' => $user->toApiResult(Entity::VERBOSITY_VERBOSE, ['full_profile' => true])
-        ]);
     }
 
     /**
